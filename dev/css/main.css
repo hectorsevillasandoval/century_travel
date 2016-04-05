@@ -1,5 +1,8 @@
+@import 'variables';
+
+
 /* Main CSS */
 
-body{
-	background-color:blue; 
+.blue-color{
+	background-color:$blue-color;
 }

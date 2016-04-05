@@ -25,6 +25,7 @@
     "gulp-webserver": "^0.9.1",
     "lost": "^6.7.2",
     "postcss-font-magician": "^1.4.0",
+    "postcss-normalize": "^0.2.0",
     "precss": "^1.4.0"
   }
 }

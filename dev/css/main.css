@@ -1,8 +1,70 @@
 @import 'variables';
+@import 'reset';
+@import 'mixins';
+@import 'helpers';
+@import 'navigation';
 
 
+
+html{
+	font-size: 16px;
+}
+
+body{
+	font-family:"Varela Round";
+}
+a{
+	text-decoration:none;
+}
 /* Main CSS */
 
-.blue-color{
-	background-color:$blue-color;
+.wrapper{
+	
+}
+
+.social-icons{
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	text-align: center;
+	ul{
+		li{
+			font-size: 14px;
+			color:white;
+			margin-top: .5rem;
+			&.facebook,
+			&.twitter{
+				@mixin alinear;
+			}
+
+			a{
+				color:white; 
+				&.mail{
+					@mixin icons \f0e0;	
+				}
+				&.phone{
+					@mixin icons \f098;	
+				}
+			}
+			.icon-fb{
+				@mixin icons \f082;
+				&:before{
+					font-size: 1.5rem;
+				}
+			}
+			.icon-tw{
+				@mixin icons \f081;
+				&:before{
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}
+
+header{
+	.logo{
+		padding-top: 1rem;
+		text-align: center;
+		padding-bottom: 1rem;
+	}
 }

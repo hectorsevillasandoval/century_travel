@@ -1,0 +1,9 @@
+.blue-color{
+	background-color: $blue-color;
+}
+.mobile-menu{
+	@mixin icons \f0c9;
+	&:before{
+		font-size: 1.8rem;
+	}
+}

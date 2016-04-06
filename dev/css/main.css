@@ -12,10 +12,20 @@ html{
 
 body{
 	font-family:"Varela Round";
+	line-height:1.5;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: "Playfair Display";
+}
+p{
+	color:#444;
 }
 a{
 	text-decoration:none;
+
 }
+
 /* Main CSS */
 
 .wrapper{
@@ -35,8 +45,8 @@ a{
 			&.twitter{
 				@mixin alinear;
 			}
-
-			a{
+			@at-root{
+				a{
 				color:white; 
 				&.mail{
 					@mixin icons \f0e0;	
@@ -57,6 +67,9 @@ a{
 					font-size: 1.5rem;
 				}
 			}
+
+			}
+			
 		}
 	}
 }
@@ -69,10 +82,53 @@ header{
 	}
 }
 
-@media $medium{
-	.wrapper{
-		lost-utility:clearfix;
+.principal{
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	a{
+		&:hover{
+			color:$naranja;
+		}
 	}
+}
+
+
+
+
+footer{
+	background-color: #444;
+	color:white;
+	text-align: center;
+	.wrapper{
+		padding: 1rem;
+		.column-4{
+			ul{
+				li{
+					&:nth-child(3),
+					&:last-child{
+						@mixin alinear;
+					}
+				}
+			}
+		}
+	}
+
+	p,a{
+		color:white;
+		font-size:.8rem;
+	} 
+	a{
+		&:hover{
+			color:$naranja;
+		}
+		
+	}
+	div[class *= "column"]{
+		padding-top: 1.3rem;
+	}
+}
+@media $medium{
+	
 	.social-icons{
 		li{
 			@mixin alinear;
@@ -87,11 +143,27 @@ header{
 			lost-column: 2/3;
 		}
 	}
+
+	footer{
+		.wrapper{
+			lost-utility:clearfix;
+			[class *= "column"]{
+				lost-column:1/2;
+			}
+		}
+	}
 }
 
 @media $large{
 	.wrapper{
 		lost-center: $ancho;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	header{
+		.logo{
+			text-align: left;
+		}
 	}
 	.social-icons{
 		text-align: right;
@@ -104,6 +176,15 @@ header{
 					margin-top: .25rem;
 				}
 			}
+		}
+	}
+
+	footer{
+		.wrapper{
+			lost-utility:clearfix;
+			[class *= "column"]{
+				lost-column:1/4;
+			} 
 		}
 	}
 }

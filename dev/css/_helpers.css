@@ -7,3 +7,55 @@
 		font-size: 1.8rem;
 	}
 }
+
+.white-text{
+	color:white;
+}
+.blue-color-text{
+	color:$blue-color;
+}
+
+/* headers */
+h1{
+	font-size: 36px;
+}
+h2{
+	font-size: 32px;
+}
+h3{
+	font-size: 28px;
+}
+h4{
+	font-size: 24px;
+}
+h5{
+	font-size: 20px;
+}
+h6{
+	font-size: 18px;
+}
+
+/* Buttons */
+
+@define-extend buttons{
+	color:white;
+	padding: .8rem 1.2rem;
+	display:inline-block;
+	text-transform: uppercase;
+}
+
+.btn-1{
+	background-color: $naranja;
+	@extend buttons;
+}
+.btn-2{
+	background-color: $blue-color;
+	@extend buttons;
+}
+
+/* END */
+
+.footer-title{
+	text-transform: uppercase;
+	font-size: 1rem;
+}

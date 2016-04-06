@@ -8,6 +8,9 @@
 }
 
 @define-mixin icons $code{
+	text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 	&::before{
 		font-family: fontawesome;
 		content: '$(code)';

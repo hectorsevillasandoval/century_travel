@@ -4,7 +4,9 @@ var gulp = require('gulp'),
   postcss = require('gulp-postcss'),
   autoprefixer = require('autoprefixer'),
   precss = require('precss'),
-  cssnano = require('cssnano');
+  cssnano = require('cssnano'),
+  lost = require('lost'),
+  normalize = require('postcss-normalize');
 
 
   var config = {
@@ -23,7 +25,9 @@ var gulp = require('gulp'),
   gulp.src(config.source +'css/'+ 'main.css')
   .pipe(postcss([
     precss(),
+    lost(),
     autoprefixer(),
+    normalize(),
     cssnano()
   ]))
   .on('error', gutil.log)

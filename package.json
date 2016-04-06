@@ -20,11 +20,14 @@
     "autoprefixer": "^6.3.6",
     "cssnano": "^3.5.2",
     "gulp": "^3.9.1",
+    "gulp-imagemin": "^2.4.0",
     "gulp-postcss": "^6.1.0",
     "gulp-util": "^3.0.7",
     "gulp-webserver": "^0.9.1",
     "lost": "^6.7.2",
+    "postcss-font-awesome": "^0.2.1",
     "postcss-font-magician": "^1.4.0",
+    "postcss-normalize": "^0.2.0",
     "precss": "^1.4.0"
   }
 }

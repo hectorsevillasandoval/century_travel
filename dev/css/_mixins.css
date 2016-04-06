@@ -1,0 +1,23 @@
+@define-mixin alinear{
+	display:inline-block;
+	vertical-align:top;
+	margin-right:4px;
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+@define-mixin icons $code{
+	text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	&::before{
+		font-family: fontawesome;
+		content: '$(code)';
+		padding-right: .4rem;
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: normal;
+	}
+
+}

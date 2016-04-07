@@ -6,6 +6,7 @@ var gulp = require('gulp'),
   precss = require('precss'),
   cssnano = require('cssnano'),
   lost = require('lost'),
+  fonts = require('postcss-font-magician'),
   normalize = require('postcss-normalize');
 
 
@@ -28,6 +29,7 @@ var gulp = require('gulp'),
     lost(),
     autoprefixer(),
     normalize(),
+    fonts(),
     cssnano()
   ]))
   .on('error', gutil.log)

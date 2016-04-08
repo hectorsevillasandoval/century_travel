@@ -20,7 +20,7 @@
 				color:white;
 			}
 		}
-		&.active{
+		&.current_page_item{
 			background-color: $naranja;
 			a{
 				color:white;

@@ -127,8 +127,33 @@ footer{
 		padding-top: 1.3rem;
 	}
 }
+
+.buscador{
+	background-color:$blue-color;
+	padding-top: 2rem;
+	padding-bottom: @padding-top;
+	text-align: center;
+	h2{
+		margin-bottom: .8rem;
+	}
+	input[type="text"],
+	input[type="search"]{
+		width:90%;
+		margin-bottom: 1rem;
+		padding-top: .7rem;
+		padding-bottom: @padding-top;
+	}
+}
 @media $medium{
 	
+	.buscador{
+		input[type="text"],
+		input[type="search"]{
+			max-width:500px;
+			margin-bottom: 0;
+			width:100%;	
+		}	
+	}
 	.social-icons{
 		li{
 			@mixin alinear;
